@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "Главная";
+}
+
+<div class="text-center py-5 animate-in">
+    <h1 class="display-3 text-primary fw-bold mb-4">Добро пожаловать в MovieCatalog! 🎬</h1>
+    <p class="lead mb-5">Ваш персональный список любимых фильмов. Управляйте своей коллекцией легко и красиво.</p>
+    
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+            <div class="card h-100 p-4">
+                <div class="card-body">
+                    <h2 class="h4 mb-3">📂 Просмотр</h2>
+                    <p class="text-muted">Изучайте свою библиотеку фильмов в удобном сеточном виде.</p>
+                    <a asp-controller="Movies" asp-action="Index" class="btn btn-outline-primary mt-3">Открыть каталог</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 p-4">
+                <div class="card-body">
+                    <h2 class="h4 mb-3">➕ Добавление</h2>
+                    <p class="text-muted">Добавляйте новые шедевры кинематографа в один клик.</p>
+                    <a asp-controller="Movies" asp-action="Add" class="btn btn-primary mt-3">Добавить фильм</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

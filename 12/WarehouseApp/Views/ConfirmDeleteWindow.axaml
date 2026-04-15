@@ -1,0 +1,32 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="WarehouseApp.Views.ConfirmDeleteWindow"
+        Width="360"
+        Height="170"
+        Title="Подтверждение"
+        WindowStartupLocation="CenterOwner"
+        CanResize="False">
+
+    <Border Background="White" Padding="20">
+        <StackPanel Spacing="20">
+            <TextBlock Name="MessageText"
+                       Text="Удалить выбранный товар?"
+                       FontSize="16"
+                       HorizontalAlignment="Center"
+                       TextAlignment="Center"/>
+
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        Spacing="12">
+                <Button Name="YesButton"
+                        Content="Да"
+                        Width="100"
+                        Click="Yes_Click"/>
+                <Button Name="NoButton"
+                        Content="Нет"
+                        Width="100"
+                        Click="No_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</Window>

@@ -1,0 +1,29 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaloniaApplication1.ViewModels"
+        x:Class="AvaloniaApplication1.Views.LoginWindow"
+        x:DataType="vm:LoginViewModel"
+        Width="400"
+        Height="300"
+        Title="Вход"
+        RequestedThemeVariant="Light">
+
+    <StackPanel Margin="20" Spacing="10">
+        <TextBlock Text="Авторизация"
+                   FontSize="22"
+                   FontWeight="Bold"/>
+
+        <TextBlock Text="Логин"/>
+        <TextBox Text="{Binding Login, Mode=TwoWay}"/>
+
+        <TextBlock Text="Пароль"/>
+        <TextBox Text="{Binding Password, Mode=TwoWay}"/>
+
+        <StackPanel Orientation="Horizontal" Spacing="10">
+            <Button Content="Войти" Command="{Binding LoginCommand}"/>
+            <Button Content="Регистрация" Command="{Binding RegisterCommand}"/>
+        </StackPanel>
+
+        <TextBlock Text="{Binding StatusMessage}"/>
+    </StackPanel>
+</Window>

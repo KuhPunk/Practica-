@@ -1,0 +1,17 @@
+{
+  "Products": [
+    {
+      "Name": "Ноутбук",
+      "Quantity": 5,
+      "Price": 45000,
+      "Category": "Электроника"
+    },
+    {
+      "Name": "Принтер",
+      "Quantity": 2,
+      "Price": 12000,
+      "Category": "Техника"
+    }
+  ],
+  "Supplies": []
+}

@@ -1,0 +1,47 @@
+@model IEnumerable<MovieCatalog.Models.Movie>
+
+@{
+    ViewData["Title"] = "Каталог фильмов";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="display-4">🍿 @ViewData["Title"]</h1>
+    <a asp-action="Add" class="btn btn-primary btn-lg">Добавить фильм</a>
+</div>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["SuccessMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<div class="movie-grid">
+    @foreach (var item in Model)
+    {
+        <div class="card h-100">
+            <div class="movie-card-body d-flex flex-column h-100">
+                <h3 class="card-title text-primary">@item.Title</h3>
+                <div class="mb-2">
+                    <span class="badge bg-secondary">@item.Genre</span>
+                    <span class="badge bg-dark">@item.Year г.</span>
+                </div>
+                <p class="movie-rating mb-3">⭐ @item.Rating / 10</p>
+                <div class="mt-auto d-flex gap-2">
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-info flex-grow-1">Детали</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-warning flex-grow-1">Правка</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger flex-grow-1">Удалить</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@if (!Model.Any())
+{
+    <div class="text-center py-5">
+        <h3 class="text-muted">В каталоге пока нет фильмов...</h3>
+        <p>Нажмите кнопку выше, чтобы добавить свой первый фильм!</p>
+    </div>
+}

@@ -1,0 +1,14 @@
+/Users/my/Desktop/практкиа С#/6/4/4/4/bin/Debug/net7.0/4
+/Users/my/Desktop/практкиа С#/6/4/4/4/bin/Debug/net7.0/4.deps.json
+/Users/my/Desktop/практкиа С#/6/4/4/4/bin/Debug/net7.0/4.runtimeconfig.json
+/Users/my/Desktop/практкиа С#/6/4/4/4/bin/Debug/net7.0/4.dll
+/Users/my/Desktop/практкиа С#/6/4/4/4/bin/Debug/net7.0/4.pdb
+/Users/my/Desktop/практкиа С#/6/4/4/4/obj/Debug/net7.0/4.GeneratedMSBuildEditorConfig.editorconfig
+/Users/my/Desktop/практкиа С#/6/4/4/4/obj/Debug/net7.0/4.AssemblyInfoInputs.cache
+/Users/my/Desktop/практкиа С#/6/4/4/4/obj/Debug/net7.0/4.AssemblyInfo.cs
+/Users/my/Desktop/практкиа С#/6/4/4/4/obj/Debug/net7.0/4.csproj.CoreCompileInputs.cache
+/Users/my/Desktop/практкиа С#/6/4/4/4/obj/Debug/net7.0/4.dll
+/Users/my/Desktop/практкиа С#/6/4/4/4/obj/Debug/net7.0/refint/4.dll
+/Users/my/Desktop/практкиа С#/6/4/4/4/obj/Debug/net7.0/4.pdb
+/Users/my/Desktop/практкиа С#/6/4/4/4/obj/Debug/net7.0/4.genruntimeconfig.cache
+/Users/my/Desktop/практкиа С#/6/4/4/4/obj/Debug/net7.0/ref/4.dll

@@ -1,0 +1,168 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:WarehouseApp.ViewModels"
+        x:Class="WarehouseApp.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        x:Name="RootWindow"
+        Width="1100" Height="700"
+        MinWidth="950" MinHeight="620"
+        Title="АРМ склада"
+        Background="#F3F4F6"
+        mc:Ignorable="d">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+
+    <Window.KeyBindings>
+        <KeyBinding Gesture="Ctrl+N" Command="{Binding #RootWindow.AddProductCommand}" />
+        <KeyBinding Gesture="Ctrl+E" Command="{Binding #RootWindow.EditProductCommand}" />
+        <KeyBinding Gesture="Ctrl+D" Command="{Binding #RootWindow.DeleteProductCommand}" />
+    </Window.KeyBindings>
+
+    <Window.Styles>
+        <Style Selector="Button.toolbar">
+            <Setter Property="Width" Value="170"/>
+            <Setter Property="Height" Value="42"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+        <Style Selector="Button#AddButton">
+            <Setter Property="Background" Value="#2563EB"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style Selector="Button#AddButton:pointerover">
+            <Setter Property="Background" Value="#1D4ED8"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Opacity" Value="1"/>
+        </Style>
+        <Style Selector="Button#AddButton:pressed">
+            <Setter Property="Background" Value="#1E40AF"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Opacity" Value="1"/>
+        </Style>
+
+        <Style Selector="Button#EditButton">
+            <Setter Property="Background" Value="#F59E0B"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style Selector="Button#EditButton:pointerover">
+            <Setter Property="Background" Value="#D97706"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Opacity" Value="1"/>
+        </Style>
+        <Style Selector="Button#EditButton:pressed">
+            <Setter Property="Background" Value="#B45309"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Opacity" Value="1"/>
+        </Style>
+
+        <Style Selector="Button#DeleteButton">
+            <Setter Property="Background" Value="#DC2626"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style Selector="Button#DeleteButton:pointerover">
+            <Setter Property="Background" Value="#B91C1C"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Opacity" Value="1"/>
+        </Style>
+        <Style Selector="Button#DeleteButton:pressed">
+            <Setter Property="Background" Value="#991B1B"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Opacity" Value="1"/>
+        </Style>
+    </Window.Styles>
+
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Файл">
+                <MenuItem Header="_Выход"
+                          Click="ExitMenu_Click"/>
+            </MenuItem>
+
+            <MenuItem Header="_Склад">
+                <MenuItem Header="_Добавить товар"
+                          Command="{Binding #RootWindow.AddProductCommand}"
+                          HotKey="Ctrl+N"/>
+                <MenuItem Header="_Редактировать товар"
+                          Command="{Binding #RootWindow.EditProductCommand}"
+                          HotKey="Ctrl+E"/>
+                <MenuItem Header="_Удалить товар"
+                          Command="{Binding #RootWindow.DeleteProductCommand}"
+                          HotKey="Ctrl+D"/>
+            </MenuItem>
+
+            <MenuItem Header="_Настройки">
+                <MenuItem Header="_О программе"
+                          Click="AboutMenu_Click"/>
+            </MenuItem>
+        </Menu>
+
+        <Border DockPanel.Dock="Top"
+                Background="#E5E7EB"
+                Padding="12"
+                BorderBrush="#D1D5DB"
+                BorderThickness="0,0,0,1">
+            <StackPanel Orientation="Horizontal" Spacing="12">
+                <Button Classes="toolbar"
+                        Name="AddButton"
+                        Content="Добавить товар"
+                        Command="{Binding #RootWindow.AddProductCommand}" />
+
+                <Button Classes="toolbar"
+                        Name="EditButton"
+                        Content="Редактировать товар"
+                        Command="{Binding #RootWindow.EditProductCommand}" />
+
+                <Button Classes="toolbar"
+                        Name="DeleteButton"
+                        Content="Удалить товар"
+                        Command="{Binding #RootWindow.DeleteProductCommand}" />
+            </StackPanel>
+        </Border>
+
+        <Border Background="#F3F4F6" Padding="20">
+            <Grid RowDefinitions="Auto,20,*">
+
+                <TextBlock Grid.Row="0"
+                           Text="АРМ склада"
+                           FontSize="30"
+                           FontWeight="Bold"
+                           Foreground="#2C3E50"
+                           HorizontalAlignment="Center"/>
+
+                <Border Grid.Row="2"
+                        Background="White"
+                        BorderBrush="#D1D5DB"
+                        BorderThickness="1"
+                        CornerRadius="8">
+                    <DataGrid Name="ProductsGrid"
+                              ItemsSource="{Binding Products}"
+                              SelectedItem="{Binding SelectedProduct, Mode=TwoWay}"
+                              AutoGenerateColumns="False"
+                              CanUserResizeColumns="True"
+                              GridLinesVisibility="All"
+                              HeadersVisibility="Column"
+                              RowHeight="44"
+                              Background="White"
+                              Foreground="Black"
+                              IsReadOnly="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Название"
+                                                Binding="{Binding Name}"
+                                                Width="3*" />
+                            <DataGridTextColumn Header="Количество"
+                                                Binding="{Binding Quantity}"
+                                                Width="2*" />
+                            <DataGridTextColumn Header="Цена"
+                                                Binding="{Binding Price}"
+                                                Width="2*" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Border>
+            </Grid>
+        </Border>
+    </DockPanel>
+</Window>

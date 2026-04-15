@@ -1,0 +1,14 @@
+/Users/my/Desktop/практкиа С#/4/3/3/3/bin/Debug/net7.0/3
+/Users/my/Desktop/практкиа С#/4/3/3/3/bin/Debug/net7.0/3.deps.json
+/Users/my/Desktop/практкиа С#/4/3/3/3/bin/Debug/net7.0/3.runtimeconfig.json
+/Users/my/Desktop/практкиа С#/4/3/3/3/bin/Debug/net7.0/3.dll
+/Users/my/Desktop/практкиа С#/4/3/3/3/bin/Debug/net7.0/3.pdb
+/Users/my/Desktop/практкиа С#/4/3/3/3/obj/Debug/net7.0/3.GeneratedMSBuildEditorConfig.editorconfig
+/Users/my/Desktop/практкиа С#/4/3/3/3/obj/Debug/net7.0/3.AssemblyInfoInputs.cache
+/Users/my/Desktop/практкиа С#/4/3/3/3/obj/Debug/net7.0/3.AssemblyInfo.cs
+/Users/my/Desktop/практкиа С#/4/3/3/3/obj/Debug/net7.0/3.csproj.CoreCompileInputs.cache
+/Users/my/Desktop/практкиа С#/4/3/3/3/obj/Debug/net7.0/3.dll
+/Users/my/Desktop/практкиа С#/4/3/3/3/obj/Debug/net7.0/refint/3.dll
+/Users/my/Desktop/практкиа С#/4/3/3/3/obj/Debug/net7.0/3.pdb
+/Users/my/Desktop/практкиа С#/4/3/3/3/obj/Debug/net7.0/3.genruntimeconfig.cache
+/Users/my/Desktop/практкиа С#/4/3/3/3/obj/Debug/net7.0/ref/3.dll

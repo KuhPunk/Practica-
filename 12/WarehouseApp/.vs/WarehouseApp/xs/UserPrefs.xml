@@ -1,0 +1,42 @@
+﻿<Properties StartupConfiguration="{F0D971B8-29AC-4D8A-AFFB-1B18922872FB}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/MainWindow.axaml.cs">
+    <Files>
+      <File FileName="ViewModels/MainWindowViewModel.cs" />
+      <File FileName="Views/MainWindow.axaml" />
+      <File FileName="Views/ProductEditWindow.axaml" />
+      <File FileName="Views/ProductEditWindow.axaml.cs" />
+      <File FileName="ViewModels/ProductEditWindowViewModel.cs" />
+      <File FileName="App.axaml" />
+      <File FileName="ViewLocator.cs" />
+      <File FileName="Views/MainWindow.axaml.cs" Line="140" Column="2" />
+      <File FileName="Models/Product.cs" Line="8" Column="2" />
+      <File FileName="ViewModels/ViewModelBase.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WarehouseApp" expanded="True">
+            <Node name="WarehouseApp" expanded="True">
+              <Node name="Models" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="ConfirmDeleteWindow.axaml" expanded="True" />
+                <Node name="MainWindow.axaml" expanded="True">
+                  <Node name="MainWindow.axaml.cs" selected="True" />
+                </Node>
+                <Node name="ProductEditWindow.axaml" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.WarehouseApp PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

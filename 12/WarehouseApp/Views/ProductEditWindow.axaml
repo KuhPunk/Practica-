@@ -1,0 +1,56 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:WarehouseApp.ViewModels"
+        x:Class="WarehouseApp.Views.ProductEditWindow"
+        x:DataType="vm:ProductEditWindowViewModel"
+        Width="400" Height="300"
+        Title="Товар"
+        WindowStartupLocation="CenterOwner"
+        mc:Ignorable="d">
+
+    <Design.DataContext>
+        <vm:ProductEditWindowViewModel />
+    </Design.DataContext>
+
+    <Border Background="White" Padding="20">
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto"
+              ColumnDefinitions="Auto,*"
+              RowSpacing="12"
+              ColumnSpacing="10">
+
+            <TextBlock Grid.Row="0" Grid.Column="0"
+                       Text="Название:"
+                       VerticalAlignment="Center"/>
+            <TextBox Grid.Row="0" Grid.Column="1"
+                     Text="{Binding Name, Mode=TwoWay}"/>
+
+            <TextBlock Grid.Row="1" Grid.Column="0"
+                       Text="Количество:"
+                       VerticalAlignment="Center"/>
+            <TextBox Grid.Row="1" Grid.Column="1"
+                     Text="{Binding Quantity, Mode=TwoWay}"/>
+
+            <TextBlock Grid.Row="2" Grid.Column="0"
+                       Text="Цена:"
+                       VerticalAlignment="Center"/>
+            <TextBox Grid.Row="2" Grid.Column="1"
+                     Text="{Binding Price, Mode=TwoWay}"/>
+
+            <StackPanel Grid.Row="3"
+                        Grid.ColumnSpan="2"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        Spacing="10"
+                        Margin="0,15,0,0">
+                <Button Name="SaveButton"
+                        Content="Сохранить"
+                        Width="120"/>
+                <Button Name="CancelButton"
+                        Content="Отмена"
+                        Width="120"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
